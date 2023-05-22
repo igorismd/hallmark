@@ -1,0 +1,165 @@
+@use '../../../../sass-vars/breakpoints'
+  
+.benefits-gallery
+  padding: 80px 0 40px
+
+  &__title
+    padding: 0 16px
+    margin-bottom: 16px
+
+  &__images
+    margin: 32px 0 0 16px
+    overflow-x: hidden
+    width: calc(100vw - 16px)
+
+  &__images-inner
+    display: flex
+    gap: 8px
+
+  &__image
+    width: 50%
+    height: 50%
+    opacity: 0.2
+
+    &_move
+      transition: all 0.7s linear
+      transform: translateX(calc(-100% - 8px))
+
+  &__image-main
+    min-width: calc(100vw - 32px)
+    max-width: calc(100vw - 32px)
+    height: fit-content
+    transform: perspective(var(--perspective)) rotateY(var(--rotateY))
+    transform-origin: left
+
+    &_move
+      transition: all 0.7s linear
+      transform: translateX(calc(-100% - 80px)) perspective(var(--perspective)) rotateY(var(--rotateY))
+
+  &__image-small
+    display: flex
+    overflow: hidden
+    gap: 8px
+
+  &__active-image-container
+    min-width: calc(100vw - 32px)
+    max-width: calc(100vw - 32px)
+    display: flex
+    overflow-x: hidden
+    gap: 80px
+    
+    &_completed
+      background: #2A8FFF
+
+  &__switcher
+    padding: 0 16px 0
+    margin: 0
+    list-style: none
+    counter-reset: benefits-gallery-counter
+
+  &__switcher-item
+    position: relative
+    padding: 24px 0
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25)
+    font-family: 'Montserrat', Arial, sans-serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 20px
+    color: rgba(0, 0, 0, 0.25)
+    counter-increment: benefits-gallery-counter
+    display: flex
+
+    &::before
+      content: '0' counter(benefits-gallery-counter)
+      width: 56px
+
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      bottom: -2px
+      width: 0
+      height: 2px
+      background: #2A8FFF
+      transition: width 0s linear
+
+    &_active
+      color: #000
+
+      &::after
+        transition: width 2.5s linear
+        width: 100%
+
+@media (min-width: breakpoints.$breakpoint-tablet)
+  .benefits-gallery
+    padding: 160px 0 88px
+
+    &__title
+      padding: 0 36px
+      margin-bottom: 40px
+
+    &__switcher
+      padding: 0 36px 0
+
+    &__images
+      margin: 80px 0 0 36px
+      width: calc(100% - 36px)
+
+    &__images-inner
+      gap: 16px
+
+    &__active-image-container
+      min-width: 448px
+      max-width: 448px
+
+    &__image-main
+      min-width: 448px
+      max-width: 448px
+
+    &__image-small
+      gap: 16px
+
+    &__image
+      width: auto
+      height: 151px
+
+      &_move
+        transition: all 0.7s linear
+        transform: translateX(calc(-100% - 16px))
+
+@media (min-width: breakpoints.$breakpoint-desktop)
+  .benefits-gallery
+    padding: 210px 0 140px
+    margin: 0 auto
+    max-width: 1440px
+    display: flex
+    gap: 104px
+
+    &__title
+      padding: 20px 56px 0
+      margin-bottom: 40px
+      font-size: 48px
+      line-height: 48px
+
+    &__switcher
+      padding: 0 56px 0
+
+    &__images
+      margin: 0
+
+    &__image
+      height: 156px
+
+    &__active-image-container
+      min-width: 320px
+      max-width: 320px
+      height: 420px
+
+    &__image-main
+      min-width: 100%
+      max-width: 100%
+      height: auto
+
+    & > div
+      width: calc(50% - 52px)
+

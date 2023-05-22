@@ -1,0 +1,118 @@
+@use '../../../../sass-vars/breakpoints'
+  
+.footer
+  padding: 80px 16px 32px
+  background: #FAFAFA
+  display: flex
+  flex-direction: column
+  gap: 40px
+
+  &__stamp
+    display: none
+
+  &__text
+    margin: 16px 0 40px
+
+ 
+  &__picture 
+    width: 100%
+.footer__wrp 
+  display: flex 
+  justify-content: space-between
+.footer__content
+  width: 430px
+
+.footer__picture
+  display: flex  
+  flex-wrap: wrap
+  margin-top: 18px
+
+  a
+    margin-right: 18px
+    display: block
+    margin-bottom: 19px
+    width: 151px
+    img 
+      width: 100%
+  span 
+    margin-right: 18px
+    display: block
+    margin-bottom: 19px
+    width: 151px
+    img 
+      width: 100%
+
+
+  
+
+@media (min-width: breakpoints.$breakpoint-tablet)
+  .footer
+    padding: 120px 46px 32px
+    gap: 80px
+
+ 
+
+    &__text
+      margin: 24px 0 0
+
+    &__stamp
+      display: block
+      width: 112px
+      height: 112px
+
+@media (min-width: breakpoints.$breakpoint-desktop)
+  
+  .pictury__table
+    display: none
+  .footer
+    max-width: 1440px
+    margin: 0 auto
+    padding: 120px 56px 32px
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 64px 32px
+    align-items: flex-start
+    justify-content: space-between
+    &__wrapper
+      background: #FAFAFA
+
+    &__title
+      font-size: 48px
+      line-height: 56px
+      margin-top: 18px
+
+    &__stamp
+      display: none
+
+ 
+
+    &__stamp-green
+      left: 219px
+
+@media (max-width: 1366px) 
+  .picture__destop
+    display: none
+  .footer__wrp
+    flex-wrap: wrap
+  .footer__content
+    width: 100%
+  .contact-us-form
+    margin-top: 80px
+  .pictury__table
+    margin-top: 80px
+  .contacts__stamp
+    display: none
+@media (max-width: 767px)
+  .contact-us-form
+    margin-top: 40px
+    width: 100%
+  .footer__text
+    margin-bottom: 0
+  .pictury__table
+    margin-top: 40px
+  .footer__picture
+    justify-content: center 
+    a 
+      margin: 0 5px 12px
+    span 
+      margin: 0 5px 12px

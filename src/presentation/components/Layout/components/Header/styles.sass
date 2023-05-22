@@ -1,0 +1,43 @@
+@use '../../../../sass-vars/breakpoints'
+  
+.header
+  height: 100vh
+
+  &_without-showcase
+    height: auto
+    background: transparent
+
+  &__logo
+    cursor: pointer
+
+  &__top
+    padding: 24px 16px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+
+    &_not-in-view
+      background: #fff
+      z-index: 2
+
+@media (min-width: breakpoints.$breakpoint-tablet)
+  .header
+    &__top
+      padding: 24px 40px
+
+    &__logo
+      width: 160px
+      height: 48px
+
+@media (min-width: breakpoints.$breakpoint-desktop)
+  .header
+    &__top
+      padding: 24px
+
+    &__logo
+      width: 132px
+      height: 40px

@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Syncopate:wght@400;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  font-family: 'Nunito', Arial, sans-serif;
+}
+
+img {
+  display: block;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.fixedPos {
+  margin: 0; height: 100%; overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+.wp-block-gallery {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 16px;
+}
+
+.wp-block-image {
+  margin: 0;
+  position: relative;
+}
+
+.wp-block-image img {
+  flex: 1 0 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.wp-block-image figcaption {
+  background: linear-gradient(0deg,rgba(0,0,0,.7),rgba(0,0,0,.3) 70%,transparent);
+  bottom: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 13px;
+  left: 0;
+  margin-bottom: 0;
+  max-height: 60%;
+  overflow: auto;
+  padding: 0 8px 8px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+ 

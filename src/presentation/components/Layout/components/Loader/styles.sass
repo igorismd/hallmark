@@ -1,0 +1,37 @@
+@use '../../../../sass-vars/breakpoints'
+  
+.loader
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100vh
+  background: #010FB8
+  z-index: 1000
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+
+  &__text
+    position: absolute
+    bottom: 128px
+    left: 0
+    text-align: center
+    font-family: 'Syncopate', Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 700
+    font-size: 14px
+    line-height: 26px
+    text-align: center
+    color: #FFFFFF
+    width: 100%
+
+@media (min-width: breakpoints.$breakpoint-tablet)
+  .loader
+    & img
+      width: 343px
+
+    &__text
+      font-size: 24px
+      bottom: 80px

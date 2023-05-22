@@ -1,0 +1,172 @@
+@use '../../sass-vars/breakpoints'
+  
+.blog-inner-page
+  &__post
+    margin-top: 103px
+
+    & img
+      width: 100%
+      max-width: 100%
+
+    & article
+      padding: 0 16px
+
+    & p
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif
+      font-style: normal
+      font-weight: 400
+      font-size: 12px
+      line-height: 30px
+      color: #000000
+      margin: 32px 0
+
+    & h2
+      font-family: 'Syncopate', Arial, Helvetica, sans-serif
+      font-style: normal
+      font-weight: 700
+      font-size: 14px
+      line-height: 40px
+      color: #000000
+      margin: 0 0 12px
+
+    & h3
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif
+      font-style: normal
+      font-weight: 600
+      font-size: 13px
+      line-height: 39px
+      color: #000000
+      margin: 0 0 3px
+
+  &__date
+    margin: 6px 0 16px
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 12px
+    line-height: 39px
+    color: #4E4E4E
+
+  &__image
+    max-width: 100%
+
+  &__call-action
+    margin: 0 16px
+
+    & div
+      display: flex
+      height: 139px
+      align-items: center
+      justify-content: center
+      background: #FAFAFA
+
+    & button
+      width: 186px
+
+  &__list-header
+    margin: 64px 0 32px
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 14px
+    line-height: 39px
+    color: #2A8FFF
+
+  &__list-post-link
+    text-decoration: none
+
+  &__list-image
+    width: 141px
+    display: block
+
+  &__list-title
+    margin: 12px 0 41px
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 12px
+    line-height: 24px
+    color: #000000
+
+  &__list
+    margin: 0 16px 41px
+
+@media (min-width: breakpoints.$breakpoint-tablet)
+  .blog-inner-page
+    &__post
+      & article
+        padding: 0 36px
+
+      & p
+        font-size: 16px
+        line-height: 39px
+
+      & h2
+        font-size: 26px
+        line-height: 40px
+
+      & h3
+        font-size: 16px
+
+    &__date
+      margin: 15px 0 29px
+      font-size: 16px
+
+    &__call-action
+      margin: 0 36px
+
+    &__subtitle
+      margin: 64px 0 32px
+
+    &__list-header
+      font-size: 16px
+
+    &__posts
+      display: flex
+      gap: 60px
+      flex-wrap: wrap
+
+      & a
+        display: block
+        width: 300px
+
+    &__list
+      margin: 0 36px 41px
+
+@media (min-width: breakpoints.$breakpoint-desktop)
+  .blog-inner-page
+    &__wrapper
+      margin: 0 auto
+      max-width: 1440px
+      display: flex
+      gap: 64px
+
+    &__post
+      margin-top: 115px
+
+      & article
+        padding: 0 0 0 56px
+
+    &__posts
+      gap: 37px
+
+    &__list
+      margin: 0 56px 120px 0
+      padding-left: 64px
+      border-left: 1px solid #F2F2F2
+      height: fit-content
+      position: sticky
+      top: 0
+
+    &__list-header
+      margin-top: 125px
+
+    &__call-action
+      margin: 0 0 120px 56px
+
+    &__list-title
+      margin-bottom: 0
+
+    &__list-image
+      width: auto
+      height: 75px

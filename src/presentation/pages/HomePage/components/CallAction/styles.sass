@@ -1,0 +1,41 @@
+@use '../../../../sass-vars/breakpoints'
+
+.call-action
+  margin: 0 16px
+  padding: 40px
+  background-image: url('./assets/bg.svg')
+  border-top: 4px solid #2A8FFF
+
+  & div
+    display: flex
+    flex-direction: column
+    gap: 40px
+
+  &__title-blue
+    color: #2A8FFF
+
+@media (min-width: breakpoints.$breakpoint-tablet)
+  .call-action
+    margin: 0 36px
+    padding: 72px 48px
+
+    & div
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      gap: 85px
+
+      & a
+        min-width: 211px
+
+@media (min-width: breakpoints.$breakpoint-desktop)
+  .call-action
+    margin: 0
+    padding: 92px 80px
+
+    &__wrapper
+      max-width: 1440px
+      padding: 0 56px
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
