@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'; 
 import Layout from '../../components/Layout';
 import About from './components/About';
 import BenefitsGallery from './components/BenefitsGallery';
@@ -10,7 +10,15 @@ import services from './components/ContentSection/data/services';
 import ProjectsGallery from './components/ProjectsGallery';
 import './styles.sass';
 
+ 
+
+ 
+
 const HomePage: FC = () => {
+
+ 
+
+
   return (
     <Layout withShowcase>
       <About />

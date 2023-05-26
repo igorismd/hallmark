@@ -1,11 +1,11 @@
 import React, {FC, useState} from 'react';
 import {motion} from 'framer-motion';
 import Step from '../Step';
-import slide1 from '../../assets/Hero.webp';
-import slide2 from '../../assets/Hero1.webp';
-import slide3 from '../../assets/Hero2.webp';
-import slide4 from '../../assets/Hero3.webp';
-import slide5 from '../../assets/Hero4.webp';
+import slide1 from '../../assets/hero-destop.webp';
+import slide2 from '../../assets/hero-destop1.webp';
+import slide3 from '../../assets/hero-destop2.webp';
+import slide4 from '../../assets/hero-destop3.webp';
+import slide5 from '../../assets/hero-destop4.webp';
 
 interface MainAnimationProps {
   setDisplay: (display: boolean) => void;

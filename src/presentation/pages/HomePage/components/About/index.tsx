@@ -51,7 +51,7 @@ const About: FC = () => {
           className="about__img1"
           style={{
             transform: 'perspective(var(--perspective)) rotateY(var(--rotateY))',
-            transformOrigin: 'left',
+            transformOrigin: 'left', 
           }}
         />
         <img
@@ -60,7 +60,7 @@ const About: FC = () => {
           className="about__img2"
           style={{
             transform: 'perspective(var(--perspective)) rotateY(var(--rotateY))',
-            transformOrigin: 'left',
+            transformOrigin: 'left', 
           }}
         />
       </motion.div>

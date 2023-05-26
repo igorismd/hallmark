@@ -44,6 +44,11 @@ const Header: FC<HeaderProps> = ({ withShowcase = false, isReady = true }) => {
 
   return (
     <header className={mixedClassName} ref={ref}>
+      <div className="showcase__animation-col_step-11"></div>
+      <div className="showcase__animation-col_step-21"></div>
+      <div className="showcase__animation-col_step-31"></div>
+      <div className="showcase__animation-col_step-41"></div>
+      <div className="showcase__animation-col_step-51"></div>
       {withShowcase && tabIsVisible && isReady && (
         <Showcase />
       )}

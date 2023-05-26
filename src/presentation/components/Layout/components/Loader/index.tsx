@@ -92,7 +92,8 @@ const Loader: FC<LoaderProps> = ({ setShowContent }) => {
 
     window.setTimeout(() => {
       setShow(false);
-      allIsLoaded = true;
+      allIsLoaded = true; 
+      document.body.classList.add('none');
     }, 500);
   }, [isLoaded, isAnimationCompleted, controls, setShowContent]);
 

@@ -69,7 +69,7 @@ const Showcase: FC = () => {
                   }}
                   initial={{transform: 'translateY(50px)'}}
                   animate={{transform: 'translateY(0px)'}}
-                  transition={{delay: 0.3, duration: 1}}
+                  transition={{delay: 0.3, duration: 1.5}}
                   onAnimationComplete={onCompleteFirst}
                 />
                 <motion.div
@@ -79,21 +79,21 @@ const Showcase: FC = () => {
                   }}
                   initial={{transform: 'translateY(-50px)'}}
                   animate={{transform: 'translateY(0px)'}}
-                  transition={{delay: 0.3, duration: 1}}
+                  transition={{delay: 0.3, duration: 1.5}}
                 />
                 <motion.div
                   className="showcase__animation-col-next"
-                  style={{background: 'linear-gradient(20deg, transparent 10%, #fff 10% 90%)'}}
+                  style={{background: 'linear-gradient(20deg, transparent 10%, #000 10% 90%)'}}
                   initial={{transform: 'translateY(0px)'}}
                   animate={{transform: 'translateY(-100vh)'}}
-                  transition={{duration: 1}}
+                  transition={{duration: 1.5}}
                 />
                 <motion.div
                   className="showcase__animation-col-next"
                   style={{left: '50%'}}
                   initial={{transform: 'translateY(0px)'}}
                   animate={{transform: 'translateY(100vh)'}}
-                  transition={{duration: 1}}
+                  transition={{duration: 1.5}}
                 />
                 {displayMain && <MainAnimation mobColWidth={mobColWidth} setDisplay={setDisplayMain}/>}
               </>
@@ -133,7 +133,7 @@ const Showcase: FC = () => {
                   className="showcase__animation-col-next"
                   style={{
                     left: '25%',
-                    background: 'linear-gradient(20deg, transparent 20%, #fff 20% 80%)',
+                    background: 'linear-gradient(20deg, transparent 20%, #000 20% 80%)',
                   }}
                   initial={{transform: 'translateY(0px)'}}
                   animate={{transform: 'translateY(-100vh)'}}
@@ -150,7 +150,7 @@ const Showcase: FC = () => {
                   className="showcase__animation-col-next"
                   style={{
                     left: '75%',
-                    background: 'linear-gradient(20deg, transparent 20%, #fff 20% 80%)',
+                    background: 'linear-gradient(20deg, transparent 20%, #000 20% 80%)',
                   }}
                   initial={{transform: 'translateY(0px)'}}
                   animate={{transform: 'translateY(-100vh)'}}

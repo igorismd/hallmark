@@ -15,6 +15,7 @@ if (navigator.userAgent.includes('Edg')) {
 
 root.render(
   <React.StrictMode>
+    <div className="loaderApp" style={{width: '100%', height: '100vh', position: 'absolute', top: '0', left: '0', background: '#010FB8', zIndex: '1'}}></div>
     <App />
   </React.StrictMode>
 );

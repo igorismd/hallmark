@@ -101,7 +101,7 @@ const ProjectsGallery: FC = () => {
         </div>
       </div>
       <div className="projects-gallery__controls">
-        <div className="projects-gallery__count">01 — 0{data.length}</div>
+        <div className="projects-gallery__count">0{activeImage} — 0{data.length}</div>
         <div className="projects-gallery__buttons">
           <Button theme="circle" onClick={onClick('left')}>
             <Arrow />
