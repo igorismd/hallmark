@@ -3,6 +3,7 @@ import { ButtonProps } from './types';
 import './styles.sass';
 
 const Button: FC<ButtonProps> = ({ href, target, theme, onClick, className, children }) => {
+
   let mixedClassName = 'button';
 
   if (theme) {
@@ -27,7 +28,7 @@ const Button: FC<ButtonProps> = ({ href, target, theme, onClick, className, chil
   }
 
   return (
-    <button className={mixedClassName} onClick={onClick}>{children}</button>
+    <button className={mixedClassName} onClick={onClick} >{children}</button>
   );
 };
 

@@ -8,6 +8,7 @@ import stampColored from './assets/stamp-colored.svg';
 import stampGreen from './assets/stamp-green.png';
 import Contacts from './components/Contacts';
 import ContactUsForm from './components/ContactUsForm';
+// import Form from './components/ContactUsForm';
 import './styles.sass';
 
 const Footer: FC = () => (
@@ -39,6 +40,7 @@ const Footer: FC = () => (
         </div>
         
         <ContactUsForm />
+ 
 
         <div className="footer__picture pictury__table">
           <a href="https://icba.ca" target="_target">

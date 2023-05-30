@@ -7,8 +7,12 @@ import NavButton from './components/NavButton';
 import MenuIcon from './components/MenuIcon';
 import { ReactComponent as Logo } from '../../assets/LogoColored.svg';
 import { ReactComponent as Close } from './assets/Close.svg';
-import { NavigationProps } from './types';
+import { NavigationProps } from './types'; 
 import './styles.sass';
+
+ 
+
+
 
 const Navigation: FC<NavigationProps> = ({ iconDark }) => {
   const [isOpened, setIsOpened] = useState(false);
@@ -23,18 +27,27 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
     return false;
   };
 
+  const handleClickScroll = () => {
+    const element = document.getElementById('section-1');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  
+
   const navRoutes = [
+    // {
+    //   route: ROUTES.blog,
+    //   name: 'Our blog'
+    // },
     {
-      route: ROUTES.blog,
-      name: 'Our blog'
-    },
-    {
-      href: 'https://google.com',
+      href: 'https://www.linkedin.com/company/hallmark-hardware/jobs/',
       target: '_blank',
       name: 'Open postions'
     },
     {
-      href: '#contactUs',
       name: 'Contact us'
     },
   ] as const;
@@ -82,17 +95,23 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
         ))
       ) : (
         <div className="navigation__menu">
+ 
+ 
+ 
           <a
             href={ROUTES.blog}
             className={`navigation__top-link
             ${(iconDark && ' navigation__top-link_dark')}`}
             onClick={onBlockLinkClick}
           >
-            Our Blog
+            {/* Our Blog */}
           </a>
-          <a href="https://google.com" className={`navigation__top-link ${(iconDark && ' navigation__top-link_dark')}`} target="_blank" rel="noreferrer">Open positions</a>
+ 
+          <a href="https://www.linkedin.com/company/hallmark-hardware/jobs/" className={`navigation__top-link ${(iconDark && ' navigation__top-link_dark')}`} target="_blank" rel="noreferrer">Open positions</a>
+          
+          
           <div className={`navigation__menu-phone ${(iconDark && ' navigation__menu-phone_dark')}`}>Phone: (604) 371-0717</div>
-          <Button className={`navigation__contact-us ${(iconDark && ' navigation__contact-us_dark')}`} href="#contactUs">Contact us</Button>
+          <Button className={`navigation__contact-us btn-scroll ${(iconDark && ' navigation__contact-us_dark')}`} onClick={handleClickScroll}>Contact us</Button>
           <MenuIcon fill={iconDark ? 'black' : 'white'} onClick={toggleOpened} />
         </div>
       )}

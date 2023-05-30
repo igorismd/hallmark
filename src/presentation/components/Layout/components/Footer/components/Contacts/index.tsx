@@ -15,7 +15,7 @@ const Contacts: FC = () => {
   };
 
   return (
-    <section className="contacts">
+    <section  className="contacts">
       <div className="contacts__data">
         <div className="contacts__warehouse">
           <h3 className="contacts__title">Warehouse</h3>
@@ -40,9 +40,9 @@ const Contacts: FC = () => {
       </div>
       <div className="contacts__nav">
         <div className="contacts__nav-links">
-          <a href={ROUTES.blog} onClick={goToBlog}>Our Blog</a>
-          <a href="https://google.com" target="_blank" rel="noreferrer">Open positions</a>
-          <a href="https://linkedin.com">LinkedIn</a>
+          {/* <a href={ROUTES.blog} onClick={goToBlog}>Our Blog</a> */}
+          <a href=" https://www.linkedin.com/company/hallmark-hardware/jobs/" target="_blank" rel="noreferrer">Open positions</a>
+          <a href=" https://www.linkedin.com/company/hallmark-hardware/" target="_blank">LinkedIn</a>
           <img src={stamp} alt="Hallmark" className="contacts__stamp" />
         </div>
         <div className="contacts__copy">

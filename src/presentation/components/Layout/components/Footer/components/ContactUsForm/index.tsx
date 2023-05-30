@@ -1,9 +1,11 @@
-import React, {ChangeEvent, FC, useState} from 'react';
+import React, {ChangeEvent, FC, useState} from 'react'; 
 import { Button, Input, TextArea, Typo } from '../../../../../../ui-kit';
 import successIcon from './assets/success.svg';
 import './styles.sass';
 
 const ContactUsForm: FC = () => {
+  
+
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
@@ -27,6 +29,9 @@ const ContactUsForm: FC = () => {
     setMessage(e.target.value);
   };
 
+  const API_PATH = 'http://localhost:1992/react-contact-form/api/contact/index.php';
+
+  
   
 
   const onSubmit = async () => {
@@ -48,18 +53,20 @@ const ContactUsForm: FC = () => {
     }
 
     
- 
+    
 
     const response = await fetch('/', {
+      
       method: 'POST',
       mode: 'cors',
+      
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {
         'Content-Type': 'application/json',
       },
       redirect: 'follow',
-      referrerPolicy: 'no-referrer',
+      referrerPolicy: 'no-referrer', 
       body: JSON.stringify({
         phone,
         email,
@@ -70,11 +77,14 @@ const ContactUsForm: FC = () => {
 
     // TODO -- if you need to parse JSON response
     // const data = await response.json();
+    
 
-    console.log(response);
+    // console.log(data);
 
     setDataSent(true);
   };
+
+  
   
 
   const onSuccessClick = () => {
@@ -82,7 +92,7 @@ const ContactUsForm: FC = () => {
   };
 
   return (
-    <section className="contact-us-form">
+    <section id={'section-1'} className="contact-us-form">
       <Typo.H2 className="contact-us-form__title">Request a call back</Typo.H2>
       <Input
         label="Phone Number"
@@ -108,6 +118,7 @@ const ContactUsForm: FC = () => {
         className="contact-us-form__button"
         onClick={onSubmit}
       >submit request</Button>
+      
       {dataSent && (
         <div className="contact-us-form__success">
           <img src={successIcon} alt="Success" />

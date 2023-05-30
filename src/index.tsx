@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './presentation/app';
+import App from './presentation/app'; 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,10 +9,11 @@ const root = ReactDOM.createRoot(
 );
 
 // Check if the user is using Edge
-if (navigator.userAgent.includes('Edg')) {
-  document.body.classList.add('edg'); 
-}
+// if (navigator.userAgent.includes('Edg')) {
+//   document.body.classList.add('edg'); 
+// }
 
+ 
 root.render(
   <React.StrictMode>
     <div className="loaderApp" style={{width: '100%', height: '100vh', position: 'absolute', top: '0', left: '0', background: '#010FB8', zIndex: '1'}}></div>
