@@ -1,13 +1,11 @@
-import React, {ChangeEvent, FC, useState} from 'react'; 
+import React, { ChangeEvent, useState } from 'react';
 import { Button, Input, TextArea, Typo } from '../../../../../../ui-kit';
 import successIcon from './assets/success.svg';
 import './styles.sass';
 
-const ContactUsForm: FC = () => {
-  
-
+const MyComponent = () => {
   const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState(''); 
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [dataSent, setDataSent] = useState(false);
@@ -15,7 +13,6 @@ const ContactUsForm: FC = () => {
   const onPhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
     setPhone(e.target.value);
   };
- 
 
   const onEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -29,16 +26,9 @@ const ContactUsForm: FC = () => {
     setMessage(e.target.value);
   };
 
-  const API_PATH = 'http://localhost:1992/react-contact-form/api/contact/index.php';
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent form submission
 
-  
-  
-
-  const onSubmit = async () => {
-    // if (!message || !email) {
-    //   document.body.classList.add('errorForm');
-    //   return;
-    // }  
     if (!email) {
       document.body.classList.add('errorFormEmail');
       return;
@@ -52,73 +42,63 @@ const ContactUsForm: FC = () => {
       document.body.classList.remove('errorFormMessage');
     }
 
+    const formData = new FormData();
+    formData.append('phone', phone);
+    formData.append('email', email);
+    formData.append('name', name);
+    formData.append('message', message);
+    console.log([...formData]);
+
+    try {
+      const response = await fetch('./send.php', {
+        method: 'POST',
+        body: formData,
+      });
     
+      if (response.ok) {
+        // Request was successful (status code 2xx)
+        // Handle the successful response here
+        setDataSent(true);
+        console.log('Request succeeded:', response);
+      } else {
+        // Request was not successful (status code 4xx or 5xx)
+        // Handle the error response here
+        console.log('Request failed:', response.status, response.statusText);
+      }
+    } catch (error) {
+      // An error occurred during the request
+      // Handle the error here
+      console.log('Request error:', error);
+    }
     
-
-    const response = await fetch('/', {
-      
-      method: 'POST',
-      mode: 'cors',
-      
-      cache: 'no-cache',
-      credentials: 'same-origin',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      redirect: 'follow',
-      referrerPolicy: 'no-referrer', 
-      body: JSON.stringify({
-        phone,
-        email,
-        name,
-        message,
-      }),
-    });
-
-    // TODO -- if you need to parse JSON response
-    // const data = await response.json();
-    
-
-    // console.log(data);
-
-    setDataSent(true);
   };
-
-  
-  
 
   const onSuccessClick = () => {
     setDataSent(false);
   };
 
   return (
-    <section id={'section-1'} className="contact-us-form">
+    <form onSubmit={handleSubmit} className="contact-us-form" id={'section-1'}>
       <Typo.H2 className="contact-us-form__title">Request a call back</Typo.H2>
-      <Input
-        label="Phone Number"
-        className="contact-us-form__input"
-        onChange={onPhoneChange}
-      />
-      <Input
-        label="Email *"
-        className="contact-us-form__input email"
-        onChange={onEmailChange}
-      />
-      <Input
-        label="Your Name"
-        className="contact-us-form__input"
-        onChange={onNameChange}
-      />
-      <TextArea
-        label="Message *"
-        className="contact-us-form__textarea textarea"
-        onChange={onMessageChange}
-      />
-      <Button
-        className="contact-us-form__button"
-        onClick={onSubmit}
-      >submit request</Button>
+      <label   className="input contact-us-form__input">
+        <div>Phone Number</div>
+        <input type="text" name="phone" value={phone} onChange={onPhoneChange} className="input__input"/>
+      </label> 
+      <label  className="input contact-us-form__input email">
+        <div>Email *</div>
+        <input type="text" name="email" value={email} onChange={onEmailChange} className="input__input"/>
+      </label>
       
+      <label   className="input contact-us-form__input">
+        <div>Your Name</div>
+        <input type="text" name="name" value={name} onChange={onNameChange} className="input__input"/>
+      </label>
+      
+      <label   className="textarea contact-us-form__textarea textarea">
+        <div>Message *</div>
+        <textarea   name="message" value={message} onChange={onMessageChange} className="textarea__input"></textarea>
+      </label>
+      <button type="submit" className="button contact-us-form__button">submit request</button>
       {dataSent && (
         <div className="contact-us-form__success">
           <img src={successIcon} alt="Success" />
@@ -129,8 +109,8 @@ const ContactUsForm: FC = () => {
           >Got it!</Button>
         </div>
       )}
-    </section>
+    </form>
   );
 };
 
-export default ContactUsForm;
+export default MyComponent;

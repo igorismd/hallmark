@@ -3,10 +3,13 @@ import { motion } from 'framer-motion';
 import { Typo } from '../../../../ui-kit';
 import about1 from './assets/about1.webp';
 import about2 from './assets/about2.webp';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './styles.sass';
 
 const About: FC = () => {
   const transition = { duration: 0.7 };
+
+  
 
   return (
     <section className="about">
@@ -32,6 +35,8 @@ const About: FC = () => {
           in doors and hardware, as well as extended knowledge of construction industry.
         </Typo.P>
       </motion.div>
+
+      
       <motion.div
         className="about__img-block"
         transition={transition}
@@ -45,8 +50,7 @@ const About: FC = () => {
         } as any}
         viewport={{ once: true }}
       >
-        <img
-          src={about1}
+        <LazyLoadImage src={about1}
           alt="About us"
           className="about__img1"
           style={{
@@ -54,8 +58,7 @@ const About: FC = () => {
             transformOrigin: 'left', 
           }}
         />
-        <img
-          src={about2}
+        <LazyLoadImage src={about2}
           alt="About us"
           className="about__img2"
           style={{
@@ -63,6 +66,24 @@ const About: FC = () => {
             transformOrigin: 'left', 
           }}
         />
+        {/* <img
+          src={about1}
+          alt="About us"
+          className="about__img1"
+          style={{
+            transform: 'perspective(var(--perspective)) rotateY(var(--rotateY))',
+            transformOrigin: 'left', 
+          }}
+        /> */}
+        {/* <img
+          src={about2}
+          alt="About us"
+          className="about__img2"
+          style={{
+            transform: 'perspective(var(--perspective)) rotateY(var(--rotateY))',
+            transformOrigin: 'left', 
+          }}
+        /> */}
       </motion.div>
     </section>
   );

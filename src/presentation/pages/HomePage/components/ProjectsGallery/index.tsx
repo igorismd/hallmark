@@ -3,6 +3,7 @@ import { motion, useAnimationControls } from 'framer-motion';
 import { Button, Typo } from '../../../../ui-kit';
 import ContentAppear from '../../../../components/ContentAppear';
 import data from './data';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { ReactComponent as Arrow } from './assets/arrow.svg';
 import './styles.sass';
 
@@ -77,7 +78,10 @@ const ProjectsGallery: FC = () => {
               }}
               viewport={{ once: true }}
             >
-              <img src={image} alt={title} />
+              {/* <img src={image} alt={title} /> */}
+              <LazyLoadImage src={image}
+                alt={title}
+              />
             </motion.div>
           );
         })}

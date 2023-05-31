@@ -22,7 +22,7 @@ const Input: FC<InputProps> = ({ label, onChange, className }) => {
       <div>{label}</div>
       <input
         className="input__input"
-        type="text"
+        type="text" 
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}
