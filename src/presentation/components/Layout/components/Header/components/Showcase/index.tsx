@@ -66,6 +66,7 @@ const Showcase: FC = () => {
                   className="showcase__animation-col"
                   style={{
                     backgroundPositionX: `calc(50% + ${mobColWidth}px)`,
+                    
                   }}
                   initial={{transform: 'translateY(100vh)'}}
                   animate={{transform: 'translateY(0.0001%)'}}
@@ -74,7 +75,7 @@ const Showcase: FC = () => {
                 />
                 <motion.div
                   className="showcase__animation-col"
-                  style={{
+                  style={{ 
                     left: '50%',
                   }}
                   initial={{transform: 'translateY(-100vh)'}}

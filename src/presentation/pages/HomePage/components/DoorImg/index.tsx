@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
-import { motion } from 'framer-motion';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { motion } from 'framer-motion'; 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import './styles.sass';
 
@@ -11,7 +10,9 @@ interface DoorImgProps {
 }
 
 const DoorImg: FC<DoorImgProps> = ({ src, alt, delay = 0 }) => (
-  <motion.div
+  <motion.img
+    src={src}
+    alt={alt}
     className="door-img"
     transition={{
       delay: delay * 0.2,
@@ -26,12 +27,7 @@ const DoorImg: FC<DoorImgProps> = ({ src, alt, delay = 0 }) => (
       transformOrigin: 'left',
     }}
     viewport={{ once: true }}
-  >
-    <LazyLoadImage
-      src={src}
-      alt={alt}
-    />
-  </motion.div>
+  />
 );
 
 export default DoorImg;

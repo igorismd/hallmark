@@ -7,8 +7,7 @@ import stampDhi from './assets/stamp-dhi.svg';
 import stampColored from './assets/stamp-colored.svg';
 import stampGreen from './assets/stamp-green.png';
 import Contacts from './components/Contacts';
-import ContactUsForm from './components/ContactUsForm'; 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import ContactUsForm from './components/ContactUsForm';  
 import './styles.sass';
 
 const Footer: FC = () => (
@@ -23,28 +22,20 @@ const Footer: FC = () => (
             </div>
             <div className="footer__picture picture__destop">
               <a href="https://icba.ca" target="_target">
-                <LazyLoadImage src={stampIba}
-                  alt="icba"
-                  className="footer__stamp-iba" 
-                /> 
+                <img src={stampIba} alt="icba" className="footer__stamp-iba"  />
+                 
               </a>
               <a href="https://www.dhi.org" target="_target">
-                <LazyLoadImage src={stampDhi}
-                  alt="stampDhi"
-                  className="footer__stamp-dhi" 
-                /> 
+                <img src={stampDhi} alt="stampDhi" className="footer__stamp-dhi"  />
+  
               </a>
               <span>
-                <LazyLoadImage src={stampColored}
-                  alt="Hallmark"
-                  className="footer__stamp-colored" 
-                /> 
+                <img src={stampColored} alt="Hallmark" className="footer__stamp-colored"  />
+  
               </span>
               <a href="https://businessinsurrey.com" target="_target">
-                <LazyLoadImage src={stampGreen}
-                  alt="stampGreen"
-                  className="footer__stamp-green" 
-                /> 
+                <img src={stampGreen} alt="stampGreen" className="footer__stamp-green"  />
+ 
               </a>
             </div>
           </ContentAppear>
@@ -56,28 +47,19 @@ const Footer: FC = () => (
 
         <div className="footer__picture pictury__table">
           <a href="https://icba.ca" target="_target">
-            <LazyLoadImage src={stampIba}
-              alt="icba"
-              className="footer__stamp-iba" 
-            />
+            <img src={stampIba} alt="icba" className="footer__stamp-iba"  />
+ 
           </a>
           <a href="https://www.dhi.org" target="_target">
-            <LazyLoadImage src={stampDhi}
-              alt="stampDhi"
-              className="footer__stamp-dhi" 
-            /> 
+            <img src={stampDhi} alt="stampDhi" className="footer__stamp-dhi"  />
+ 
           </a>
           <span>
-            <LazyLoadImage src={stampColored}
-              alt="Hallmark"
-              className="footer__stamp-colored" 
-            />
+            <img src={stampColored} alt="Hallmark" className="footer__stamp-colored"  />
           </span>
           <a href="https://businessinsurrey.com" target="_target">
-            <LazyLoadImage src={stampGreen}
-              alt="stampGreen"
-              className="footer__stamp-green" 
-            />
+            <img src={stampGreen} alt="stampGreen" className="footer__stamp-green"  />
+ 
           </a>
         </div>
 
