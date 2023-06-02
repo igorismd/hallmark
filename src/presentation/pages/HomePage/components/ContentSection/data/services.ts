@@ -7,9 +7,9 @@ import photo6 from '../assets/services6.webp';
 
 const data = [
   {
-    title: 'Pre-Construction Services',
+    title: 'PRE-CONSTRUCTION SERVICES',
     image: photo1,
-    text: 'We partner with general contractors to include specification review, product recommendation, and comprehensive budgeting. Our team provides in-depth division 8/10 expertise at every phase of pre-construction, including specification writing and interpretation, product recommendation and sourcing, and comprehensive budgeting.',
+    text: 'We partner with design consultants, construction managers and general contractors to provide specification writing, product recommendation, comprehensive budgeting and value engineering to ensure Life Safety Code compliance and to identify savings while respecting the design intent. Our team provides an in-depth Divisions 8 & 10 expertise at every project phase of pre-construction, tendering and procurement. An in-house Architectural Hardware Consultant (AHC by DHI) provides comprehensive specification writing and support to an architect or interior designer.',
   },
   {
     title: 'Installation and Field Service',

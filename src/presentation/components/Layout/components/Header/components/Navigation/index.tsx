@@ -45,7 +45,7 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
     {
       href: 'https://www.linkedin.com/company/hallmark-hardware/jobs/',
       target: '_blank',
-      name: 'Open postions'
+      name: 'OPEN POSITIONS'
     },
     {
       name: 'Contact us'
