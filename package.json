@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.18.2",
+    "@segment/analytics-react-native": "^2.15.0",
+    "@segment/sovran-react-native": "^1.0.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,8 +15,12 @@
     "framer-motion": "^8.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-gtm-module": "^2.0.11",
     "react-lazy": "^1.1.0",
     "react-lazy-load-image-component": "^1.5.6",
+    "react-native": "^0.71.11",
+    "react-native-get-random-values": "^1.9.0",
     "react-router-dom": "^6.11.2",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.9",
@@ -65,6 +72,7 @@
   "devDependencies": {
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
+    "@types/react-gtm-module": "^2.0.1",
     "@types/react-lazy-load-image-component": "^1.5.3",
     "@types/react-scroll": "^1.8.7",
     "sass": "^1.57.1"

@@ -30,9 +30,13 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
   const handleClickScroll = () => {
     const element = document.getElementById('section-1');
     if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
+      const scrollPosition = element.offsetTop - 150;
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth',
+      });
     }
+    setIsOpened(!isOpened);
   };
 
   
@@ -47,9 +51,10 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
       target: '_blank',
       name: 'OPEN POSITIONS'
     },
-    {
-      name: 'Contact us'
-    },
+    // {
+    //   href: '#section-1',
+    //   name: 'Contact us'
+    // },
   ] as const;
 
   const toggleOpened = () => {
@@ -76,7 +81,8 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
             <div className="navigation__top">
               <Logo className="navigation__logo" onClick={() => navigate(ROUTES.home)} />
               <div className="navigation__right">
-                <div className="navigation__right-phone">Phone: (604) 371-0717</div>
+                <div className="navigation__right-phone">Phone: 
+                  <a href="tel:(604) 371-0717"> (604) 371-0717 </a></div>
                 <Close onClick={toggleOpened} />
               </div>
             </div>
@@ -88,8 +94,11 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
                   {...item}
                 />
               ))}
+              <button className="btn-contact" onClick={handleClickScroll}>Contact us</button>
             </nav>
-            <div className="navigation__bottom">Phone: (604) 371-0717</div>
+            <div className="navigation__bottom">Phone: 
+              <a href="tel:(604) 371-0717"> (604) 371-0717 </a>
+            </div>
           </div>,
           portalElement
         ))
