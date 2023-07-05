@@ -28,11 +28,7 @@ const About: FC = () => {
       >
         <Typo.H1 className="about__title">About us</Typo.H1>
         <Typo.P className="about__txt">
-          We specialize in supply, installation and maintenance of architectural doors,
-          hardware and automatic door operators for residential, commercial, institutional
-          and detention construction industries in Canada. Being proud member of Doors
-          and Hardware Institute, Hallmark Hardware offers advanced technical experience
-          in doors and hardware, as well as extended knowledge of construction industry.
+        We specialize in supply, installation and maintenance of architectural doors, hardware and automatic door operators for residential, commercial, institutional and detention construction industries. Being proud member of Doors and Hardware Institute, Hallmark Hardware offers advanced technical experience in doors and hardware, as well as extended knowledge of construction industry. Founded in 2019, we has been grown dramatically and are now serving a wide variety of projects across Canada.
         </Typo.P>
       </motion.div>
 

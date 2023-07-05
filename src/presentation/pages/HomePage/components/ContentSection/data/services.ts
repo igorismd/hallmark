@@ -2,8 +2,7 @@ import photo1 from '../assets/services1.webp';
 import photo2 from '../assets/services2.webp';
 import photo3 from '../assets/services3.webp';
 import photo4 from '../assets/services4.webp';
-import photo5 from '../assets/services5.webp';
-import photo6 from '../assets/services6.webp';
+
 
 const data = [
   {
@@ -26,16 +25,8 @@ const data = [
     image: photo4,
     text: 'We bring you the best in security from door and electrified hardware installation to trades coordination and install management that puts you at the helm. Our all-in-one residential security solutions integrate with intercoms, video, intrusion, elevator dispatch, and visitor control to provide a customized and adaptable total access system.',
   },
-  {
-    title: 'Detention',
-    image: photo5,
-    text: 'Full range of supply and onsite modification of hollow metal doors and windows, installation and maintenance of Airteq sliding devices, swing locks, detention hardware and pneumatic systems.',
-  },
-  {
-    title: 'AUTO DOOR OPERATORS',
-    image: photo6,
-    text: 'Our company offers auto door operator (ADO) supply, installation, and maintenance services for residential, commercial, retail and institutional buildings. The premium quality products we use are equipped with state-of-the-art microprocessor-based units and a belt-driven mechanism that ensures a quieter and more efficient operation.',
-  },
+  
+  
 ];
 
 export default data;

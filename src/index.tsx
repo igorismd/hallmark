@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './presentation/app'; 
 import reportWebVitals from './reportWebVitals';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga'; 
+import { Helmet } from 'react-helmet';
 import TagManager from 'react-gtm-module';
 
-const TRACKING_ID = 'G-49B84Z5GKX'; // OUR_TRACKING_ID
+
+ 
+
+const TRACKING_ID = 'G-47MM9G85QP'; // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 
 const root = ReactDOM.createRoot(
@@ -95,16 +99,18 @@ declare global {
   }
 })();
 
-
-
 // Check if the user is using Edge
 // if (navigator.userAgent.includes('Edg')) {
 //   document.body.classList.add('edg'); 
 // }
 
- 
 root.render(
   <React.StrictMode>
+    <Helmet>
+      <meta name="google-site-verification" content="Oh6RDwi3FQZQTDBW_m5fb_r4Yk7lR-iS0LdaDnAeb1o" />
+      {/* Add more meta tags as needed */}
+    </Helmet>
+ 
     <div className="loaderApp" style={{width: '100%', height: '100vh', position: 'absolute', top: '0', left: '0', background: '#010FB8', zIndex: '1'}}></div>
     <App />
   </React.StrictMode>
