@@ -38,16 +38,16 @@ const ContentSection: FC<ContentSectionProps> = ({ title, data, className }) => 
             <ContentAppear>
               <Typo.H2 className="content-section__article-title">{title}</Typo.H2>
               <Typo.P className="content-section__text">{text}</Typo.P>
-              {pdfUrl && (
+              {pdfUrl && ( 
                 <a
-                  className="button content-section__button"
-                  href=''
-                  download="https://hallmarkhardware.ca/catalog/Hallmark_Hardware_Detention_Products_Catalog.pdf"
+                  href={require('./assets/Hallmark_Hardware_Detention_Products_Catalog.pdf')}
+                  download="Hallmark_Hardware_Detention_Products_Catalog"
                   target="_blank"
+                  rel="noreferrer"
                 >
-                  DOWNLOAD PRODUCT CATALOG
+                  <button className="button content-section__button">DOWNLOAD PRODUCT CATALOG</button>
                 </a>
-              )}
+              )} 
             </ContentAppear>
           </article>
         ))}
