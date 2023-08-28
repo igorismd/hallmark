@@ -37,7 +37,7 @@ const data = [
   {
     title: 'SPECIALTY DOORS',
     image: photo4,
-    text: 'Wide selection of specialty doors, including acoustic doors,  bulletproof doors, blastproof doors. RF (radio frequency) doors, flood doors and tornado doors.',
+    text: 'Wide selection of specialty doors, including acoustic doors, bulletproof doors, blastproof doors, stainless doors, RF (radio frequency) doors, flood doors and tornado doors.',
   },
   {
     title: 'DIVISION 10 HARDWARE',

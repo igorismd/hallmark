@@ -52,7 +52,7 @@ const Showcase: FC = () => {
   const onCompleteFirst = () => {
     window.setTimeout(() => {
       setDisplayMain(true);
-    }, 1000);
+    }, 1700);
   };
 
   return (
@@ -66,38 +66,36 @@ const Showcase: FC = () => {
                   className="showcase__animation-col"
                   style={{
                     backgroundPositionX: `calc(50% + ${mobColWidth}px)`,
-                    
                   }}
-                  initial={{transform: 'translateY(100vh)'}}
-                  animate={{transform: 'translateY(0.0001%)'}}
-                  transition={{delay: 0.3, duration: 1.5}}
+                  initial={{transform: 'translateY(50px)'}}
+                  animate={{transform: 'translateY(0px)'}}
+                  transition={{delay: 0.3, duration: 1}}
                   onAnimationComplete={onCompleteFirst}
                 />
                 <motion.div
                   className="showcase__animation-col"
-                  style={{ 
+                  style={{
                     left: '50%',
                   }}
-                  initial={{transform: 'translateY(-100vh)'}}
-                  animate={{transform: 'translateY(0.0001%)'}}
-                  transition={{delay: 0.3, duration: 1.5}} 
+                  initial={{transform: 'translateY(-50px)'}}
+                  animate={{transform: 'translateY(0px)'}}
+                  transition={{delay: 0.3, duration: 1}}
                 />
                 <motion.div
                   className="showcase__animation-col-next"
                   style={{background: 'linear-gradient(20deg, transparent 10%, rgb(1, 15, 184) 10% 90%)'}}
                   initial={{transform: 'translateY(0px)'}}
                   animate={{transform: 'translateY(-100vh)'}}
-                  transition={{duration: 1.5}}
+                  transition={{duration: 1}}
                 />
                 <motion.div
                   className="showcase__animation-col-next"
                   style={{left: '50%'}}
                   initial={{transform: 'translateY(0px)'}}
                   animate={{transform: 'translateY(100vh)'}}
-                  transition={{duration: 1.5}}
+                  transition={{duration: 1}}
                 />
                 {displayMain && <MainAnimation mobColWidth={mobColWidth} setDisplay={setDisplayMain}/>}
-                
               </>
             ) : (
               <>

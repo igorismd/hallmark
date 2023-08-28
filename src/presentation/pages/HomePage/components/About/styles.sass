@@ -18,20 +18,30 @@
 
   &__img2
     width: calc(67% - 4px)
-
+  &__img--size 
+    width: 127px
+    margin: 0 auto
+  &__link--block 
+    display: block 
+    margin-bottom: 40px
 @media (min-width: breakpoints.$breakpoint-tablet)
   .about
     margin-top: 110px
     padding: 0 36px 40px
 
     &__txt
-      margin: 40px 0 64px
+      margin: 40px 0 40px
 
     &__img1
       width: calc(33% - 12px)
 
     &__img2
       width: calc(67% - 12px)
+    &__link--block 
+      margin-bottom: 87px
+      text-align: center
+    &__img--size 
+      margin: 0
 
 @media (min-width: breakpoints.$breakpoint-desktop)
   .about
@@ -48,6 +58,8 @@
 
     &__txt
       line-height: 24px
+    &__img--size 
+      margin: 0
 
     & > div
       width: calc(50% - 64px)

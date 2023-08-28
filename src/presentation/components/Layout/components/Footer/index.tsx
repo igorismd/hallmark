@@ -62,6 +62,7 @@ const Footer: FC = () => (
               <span>
                 <img src={logo6} alt="stampDhi" />
               </span>
+               
               <span>
                 <img src={logo7} alt="stampDhi" />
               </span>
@@ -108,6 +109,7 @@ const Footer: FC = () => (
           <span>
             <img src={logo6} alt="stampDhi" />
           </span>
+           
           <span>
             <img src={logo7} alt="stampDhi" />
           </span>

@@ -30,6 +30,9 @@ const About: FC = () => {
         <Typo.P className="about__txt">
         We specialize in supply, installation and maintenance of architectural doors, hardware and automatic door operators for residential, commercial, institutional and detention construction industries. Being proud member of Doors and Hardware Institute, Hallmark Hardware offers advanced technical experience in doors and hardware, as well as extended knowledge of construction industry. Founded in 2019, we has been grown dramatically and are now serving a wide variety of projects across Canada.
         </Typo.P>
+        <a className="about__link--block" href="http://discovery.ariba.com/profile/AN11181747435" target="__blank"> 
+          <img className="about__img--size" src="https://service.ariba.com/an/p/Ariba/badge_245x100.jpg" alt="View Hallmark Hardware Corporation profile on Ariba Discovery" />
+        </a>
       </motion.div>
 
       
