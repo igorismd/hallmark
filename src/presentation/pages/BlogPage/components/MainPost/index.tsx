@@ -21,10 +21,10 @@ const MainPost: FC<{ post: Post }> = ({ post }) => {
   return (
     <div className="main-post">
       <img src={post.featuredImage} alt={post.title} className="main-post__image" />
-      <Typo.BlH1 className="main-post__title"><a href={`${ROUTES.blog}/${post.id}`} onClick={onAnchorClick}>{post.title}</a></Typo.BlH1>
+      <Typo.BlH1 className="main-post__title"><a href={`${ROUTES.blog}/${post.slug}`} onClick={onAnchorClick}>{post.title}</a></Typo.BlH1>
       <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
       <div className="main-post__button-container">
-        <Button className="main-post__button" onClick={() => navigate(`${ROUTES.blog}/${post.id}`)}>Read now</Button>
+        <Button className="main-post__button" onClick={() => navigate(`${ROUTES.blog}/${post.slug}`)}>Read now</Button>
       </div>
     </div>
   );

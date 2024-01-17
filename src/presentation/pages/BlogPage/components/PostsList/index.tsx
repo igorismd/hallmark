@@ -27,7 +27,7 @@ const PostsList: FC = () => {
       <MainPost post={postsList[0]} />
       {postsList.slice(1, 8).map((post) => (
         <article key={post.id}>
-          <a href={`${ROUTES.blog}/${post.id}`} onClick={onAnchorClick}>
+          <a href={`${ROUTES.blog}/${post.slug}`} onClick={onAnchorClick}>
             <img className="posts-list__image" src={post.featuredImage} alt={post.title} />
             <Typo.BlH2 className="posts-list__title">{post.title}</Typo.BlH2>
             <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />

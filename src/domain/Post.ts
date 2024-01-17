@@ -7,6 +7,7 @@ class Post {
     public readonly featuredImage: string = '',
     public readonly date: string = '',
     public readonly excerpt: string = '',
+    public readonly slug: string = '',
   ) {}
 }
 
