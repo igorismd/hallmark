@@ -1,7 +1,8 @@
 import Post from '../domain/Post';
 
 class PostFetcher {
-  private readonly url = 'https://speed.taxipark.tech/wp-json/wp/v2/';
+ 
+  private readonly url = 'https://hallmarkhardware.ca/bdwp/wp-json/wp/v2/';
 
   getById = async (postId: string): Promise<Post> => {
     const response = await fetch(`${this.url}posts/${postId}`);
@@ -15,6 +16,7 @@ class PostFetcher {
       data.content.rendered,
       mediaData.source_url,
       PostFetcher.dateToString(new Date(data.date)),
+      data.slug, // Include the slug
     );
   };
 
@@ -35,13 +37,24 @@ class PostFetcher {
           mediaData.source_url,
           PostFetcher.dateToString(new Date(data[i].date)),
           data[i].excerpt.rendered,
+          data[i].slug, // Include the slug
         )
       );
     }
-    
-    data.forEach(() => {});
 
     return postsList;
+  };
+
+  getBySlug = async (slug: string): Promise<Post> => {
+    const response = await fetch(`${this.url}posts?slug=${slug}`);
+    const data = await response.json();
+
+    if (data.length > 0) {
+      const postId = data[0].id;
+      return this.getById(postId);
+    }
+
+    throw new Error('Post not found');
   };
 
   private static dateToString = (date: Date) => {

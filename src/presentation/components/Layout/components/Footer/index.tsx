@@ -23,7 +23,7 @@ const Footer: FC = () => (
 
   <div className="footer__wrapper">
 
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="footer__wrp">
         <div className="footer__content">
           <ContentAppear>

@@ -43,6 +43,12 @@ const Contacts: FC = () => {
           {/* <a href={ROUTES.blog} onClick={goToBlog}>Our Blog</a> */}
           <a href=" https://www.linkedin.com/company/hallmark-hardware/jobs/" target="_blank" rel="noreferrer">Open positions</a>
           <a href=" https://www.linkedin.com/company/hallmark-hardware/" target="_blank">LinkedIn</a>
+          <a
+            href={ROUTES.blog}
+             
+          >
+            Our Blog
+          </a>
           <img src={stamp} alt="Hallmark" className="contacts__stamp" />
         </div>
         <div className="contacts__copy">

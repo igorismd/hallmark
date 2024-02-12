@@ -1,30 +1,40 @@
-import {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
+// usePost.ts
+
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Post from '../../domain/Post';
 import PostFetcher from '../../infrastructure/PostFetcher';
 
 const usePost = () => {
-  const {postId} = useParams();
+  const { slug } = useParams();
   const [isPending, setIsPending] = useState<boolean>(true);
-  const [post, setPost] = useState(new Post());
+  const [post, setPost] = useState<Post | null>(null);
 
   useEffect(() => {
-    setIsPending(true);
+    const fetchData = async () => {
+      try {
+        setIsPending(true);
 
-    (async () => {
-      if (!postId) {
-        throw new Error('Undefined Post ID');
+        if (!slug) {
+          throw new Error('Undefined Post Slug');
+        }
+
+        const postFetcher = new PostFetcher();
+        const fetchedPost = await postFetcher.getBySlug(slug);
+
+        setPost(fetchedPost);
+        setIsPending(false);
+      } catch (error) {
+        // Handle the error (e.g., set an error state)
+        setPost(null);
+        setIsPending(false);
       }
+    };
 
-      const postFetcher = new PostFetcher();
-      const post = await postFetcher.getById(postId);
+    fetchData();
+  }, [slug]);
 
-      setPost(post);
-      setIsPending(false);
-    })();
-  }, [postId]);
-
-  return {isPending, post};
+  return { isPending, post };
 };
 
 export default usePost;

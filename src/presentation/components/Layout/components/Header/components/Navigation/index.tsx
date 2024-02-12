@@ -42,10 +42,10 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
   
 
   const navRoutes = [
-    // {
-    //   route: ROUTES.blog,
-    //   name: 'Our blog'
-    // },
+    {
+      route: ROUTES.blog,
+      name: 'Our blog'
+    },
     {
       href: 'https://www.linkedin.com/company/hallmark-hardware/jobs/',
       target: '_blank',
@@ -113,7 +113,7 @@ const Navigation: FC<NavigationProps> = ({ iconDark }) => {
             ${(iconDark && ' navigation__top-link_dark')}`}
             onClick={onBlockLinkClick}
           >
-            {/* Our Blog */}
+            Our Blog
           </a>
  
           <a href="https://www.linkedin.com/company/hallmark-hardware/jobs/" className={`navigation__top-link ${(iconDark && ' navigation__top-link_dark')}`} target="_blank" rel="noreferrer">Open positions</a>
